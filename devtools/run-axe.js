@@ -36,7 +36,7 @@ const axeCore = require('axe-core');
       });
     });
 
-    const outPath = path.resolve(process.cwd(), 'devtools', 'axe-report.json');
+    const outPath = path.resolve(__dirname, 'axe-report.json');
     fs.writeFileSync(outPath, JSON.stringify(results, null, 2));
     console.log(`Relatório salvo em: ${outPath}`);
     console.log(`Violations: ${results.violations.length}`);

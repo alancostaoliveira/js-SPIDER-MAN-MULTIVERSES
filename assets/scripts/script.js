@@ -108,6 +108,7 @@ function initMenuToggle() {
   const toggle = document.querySelector('.s-menu__toggle');
   const menu = document.getElementById('site-menu');
   const nav = document.querySelector('.s-menu');
+  const panel = document.querySelector('.s-menu__panel');
   const overlay = document.querySelector('.s-menu__overlay');
   let focusableElements = [];
   let firstFocusable = null;
@@ -120,6 +121,9 @@ function initMenuToggle() {
 
   const closeMenu = () => {
     nav.classList.remove('s-menu--open');
+    if (panel) {
+      panel.hidden = true;
+    }
     toggle.setAttribute('aria-expanded', 'false');
     toggle.classList.remove('is-open');
     toggle.setAttribute('aria-label', 'Abrir menu');
@@ -158,6 +162,9 @@ function initMenuToggle() {
 
   const openMenu = () => {
     nav.classList.add('s-menu--open');
+    if (panel) {
+      panel.hidden = false;
+    }
     toggle.setAttribute('aria-expanded', 'true');
     toggle.classList.add('is-open');
     toggle.setAttribute('aria-label', 'Fechar menu');
