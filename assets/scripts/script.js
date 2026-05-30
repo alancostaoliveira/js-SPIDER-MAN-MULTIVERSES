@@ -238,12 +238,6 @@ function initMenuToggle() {
 
   const closeBtn = document.querySelector('.s-menu__close');
   if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && nav.classList.contains('s-menu--open')) {
-      closeMenu();
-    }
-  });
 }
 
 // Global error handlers to surface silent errors in console
