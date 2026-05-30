@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #b9001f;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+}
+
+/* Reserve image space to avoid layout shift (CLS) */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.s-card__background {
+  aspect-ratio: 16/9;
+  width: 100%;
+  object-fit: cover;
+}
+
+.s-card__image {
+  aspect-ratio: 3/4;
+  max-width: 60%;
+  object-fit: contain;
+}
+
+.s-logo img {
+  max-width: 320px;
+  height: auto;
+}
+
+.gallery img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.navigator__icon img,
+.s-menu__icon img {
+  aspect-ratio: 1/1;
+  width: 48px;
+  height: auto;
+}

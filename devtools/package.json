@@ -1,0 +1,13 @@
+{
+  "name": "spiderman-axe-runner",
+  "version": "1.0.0",
+  "description": "Runner local para executar axe-core via Puppeteer",
+  "main": "run-axe.js",
+  "scripts": {
+    "axe": "node run-axe.js"
+  },
+  "dependencies": {
+    "axe-core": "^4.9.3",
+    "puppeteer": "^20.0.0"
+  }
+}

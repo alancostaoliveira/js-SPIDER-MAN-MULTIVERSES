@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Site de fãs sobre Spider-Man multiversos, com carrossel dos atores Tobey Maguire, Tom Holland e Andrew Garfield."
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/home-page-styles.css" />
+    <title>Spider-Man | Multiversos</title>
+  </head>
+  <body>
+    <nav class="s-menu">
+      <button
+        class="s-menu__toggle"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        aria-label="Abrir menu"
+      >
+        <span class="s-hamburger">
+          <span class="s-hamburger__bar"></span>
+          <span class="s-hamburger__bar"></span>
+          <span class="s-hamburger__bar"></span>
+        </span>
+      </button>
+
+      <div
+        class="s-menu__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-labelledby="site-menu-label"
+      >
+        <h2 id="site-menu-label" class="sr-only">Menu do site</h2>
+        <button class="s-menu__close sr-only" aria-label="Fechar menu">
+          ×
+        </button>
+        <ul id="site-menu" role="menu" aria-labelledby="site-menu-label">
+          <li class="s-menu__item">
+            <a href="/" role="menuitem">Página Inicial</a>
+          </li>
+          <li class="s-menu__item">
+            <a href="#" role="menuitem">Tobey Maguire</a>
+          </li>
+          <li class="s-menu__item s-menu__icon">
+            <img
+              src="./assets/images/icons/spider.svg"
+              alt="Spider-Man Multiverse"
+            />
+          </li>
+          <li class="s-menu__item">
+            <a href="#" role="menuitem">Tom Holland</a>
+          </li>
+          <li class="s-menu__item">
+            <a href="#" role="menuitem">Andrew Garfield</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="s-menu__overlay" aria-hidden="true"></div>
+    </nav>
+    <main>
+      <div class="s-container">
+        <div
+          id="s-cards-carousel"
+          class="s-cards-carousel"
+          style="transform: translateZ(-40vw) rotateY(0deg)"
+        >
+          <a
+            href="./pages/tobey-maguire/spiderman1.html"
+            class="s-card"
+            id="spider-man-01"
+          >
+            <img
+              class="s-card__background"
+              src="./assets/images/pic-sm-bg-01.jpg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              class="s-card__image"
+              src="./assets/images/spider-man-01.png"
+              alt="Tobey Maguire"
+              loading="lazy"
+            />
+            <h2 class="s-card__title">Tobey Maguire</h2>
+          </a>
+          <a
+            href="./pages/tom-holland/spiderman1.html"
+            class="s-card"
+            id="spider-man-02"
+          >
+            <img
+              class="s-card__background"
+              src="./assets/images/pic-sm-bg-02.jpg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              class="s-card__image"
+              src="./assets/images/spider-man-02.png"
+              alt="Tom Holland"
+              loading="lazy"
+            />
+            <h2 class="s-card__title">Tom Holland</h2>
+          </a>
+          <a
+            href="./pages/andrew-garfield/spiderman1.html"
+            class="s-card"
+            id="spider-man-03"
+          >
+            <img
+              class="s-card__background"
+              src="./assets/images/pic-sm-bg-03.jpg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <img
+              class="s-card__image"
+              src="./assets/images/spider-man-03.png"
+              alt="Andrew Garfield"
+              loading="lazy"
+            />
+            <h2 class="s-card__title">Andrew Garfield</h2>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="s-controller"
+        role="tablist"
+        aria-label="Controles do carrossel"
+      >
+        <button
+          id="1"
+          type="button"
+          onclick="selectCarouselItem(this)"
+          class="s-controller__button s-controller__button--active"
+          aria-pressed="true"
+          aria-controls="s-cards-carousel"
+        >
+          01
+        </button>
+        <button
+          id="2"
+          type="button"
+          onclick="selectCarouselItem(this)"
+          class="s-controller__button"
+          aria-pressed="false"
+          aria-controls="s-cards-carousel"
+        >
+          02
+        </button>
+        <button
+          id="3"
+          type="button"
+          onclick="selectCarouselItem(this)"
+          class="s-controller__button"
+          aria-pressed="false"
+          aria-controls="s-cards-carousel"
+        >
+          03
+        </button>
+        <div class="s-controller__line" aria-hidden="true"></div>
+      </div>
+    </main>
+
+    <script src="./assets/scripts/script.js"></script>
+  </body>
+</html>
